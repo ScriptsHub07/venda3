@@ -310,7 +310,10 @@ export default function ProductsPage() {
                       <button
                         onClick={() => {
                           setSelectedProduct(product);
-                          reset(product);
+                          reset({
+                            ...product,
+                            description: product.description ?? undefined,
+                          });
                         }}
                         className="rounded p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                       >
