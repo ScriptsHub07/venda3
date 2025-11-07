@@ -34,7 +34,7 @@ export default function AddressSelector({
 
   useEffect(() => {
     fetchAddresses();
-  }, []);
+  }, [supabase, selectedId, onSelect]);
 
   const fetchAddresses = async () => {
     try {
